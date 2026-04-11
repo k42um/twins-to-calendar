@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "TWINS to Calendar",
   "version": "1.0.0",
-  "description": "筑波大学TWINSの時間割をカレンダーアプリ用ICSファイルとしてエクスポート",
+  "description": "筑波大学のTWINSの履修情報をカレンダーアプリに登録するためのChrome拡張機能",
   "permissions": [
     "scripting",
     "activeTab",
