@@ -1,6 +1,6 @@
 # TWINS to Calendar
 
-[![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Install-blue?logo=googlechrome)]([https://chromewebstore.google.com/](https://chromewebstore.google.com/detail/aenjjegbenejholjhhidcpfgmfbmkfko?utm_source=item-share-cb))
+[![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Install-blue?logo=googlechrome)](https://chromewebstore.google.com/detail/aenjjegbenejholjhhidcpfgmfbmkfko?utm_source=item-share-cb)
 
 筑波大学の履修登録システム TWINS から授業の時間割を取得し、Google カレンダー・Apple カレンダー・Outlook などへインポートできる ICS ファイルを生成する Chrome 拡張機能です。
 
