@@ -11,6 +11,9 @@
   "host_permissions": [
     "https://twins.tsukuba.ac.jp/*"
   ],
+  "background": {
+    "service_worker": "background.js"
+  },
   "action": {
     "default_popup": "popup.html",
     "default_title": "TWINS to Calendar",

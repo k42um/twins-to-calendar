@@ -729,15 +729,28 @@ function escapeHtml(str) {
 // ─── エントリーポイント ───────────────────────────────────────────────────
 
 async function main() {
-  let tab, kdbData, kdbMeta;
+  let tab, kdbData, kdbMeta, holidayCorrectionNoticeV101;
   try {
-    [[tab], { kdbData, kdbMeta }] = await Promise.all([
+    [[tab], { kdbData, kdbMeta, holidayCorrectionNoticeV101 }] = await Promise.all([
       chrome.tabs.query({ active: true, currentWindow: true }),
-      new Promise(resolve => chrome.storage.local.get(['kdbData', 'kdbMeta'], resolve)),
+      new Promise(resolve => chrome.storage.local.get(['kdbData', 'kdbMeta', 'holidayCorrectionNoticeV101'], resolve)),
     ]);
   } catch {
     renderError('初期化に失敗しました。拡張機能を再読み込みしてください。');
     return;
+  }
+
+  if (holidayCorrectionNoticeV101) {
+    const notice = document.getElementById('updateNotice');
+    notice.hidden = false;
+    document.getElementById('updateNoticeDetails').addEventListener('click', () => {
+      chrome.tabs.create({ url: chrome.runtime.getURL('update-notice.html') });
+    });
+    document.getElementById('updateNoticeDismiss').addEventListener('click', () => {
+      chrome.storage.local.remove('holidayCorrectionNoticeV101', () => {
+        notice.hidden = true;
+      });
+    });
   }
 
   // KdB ステータスバー

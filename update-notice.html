@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TWINS to Calendarからのお知らせ</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 32px 20px;
+      background: #f8f9fa;
+      color: #28333a;
+      font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+    }
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 32px;
+      background: #fff;
+      border: 1px solid #e2e6e9;
+      border-radius: 12px;
+    }
+    h1 { margin: 0 0 20px; color: #20678f; font-size: 24px; line-height: 1.4; }
+    h2 { margin: 28px 0 8px; font-size: 18px; }
+    h1 + h2 { margin-top: 0; }
+    p { margin: 12px 0; }
+    ul, ol { padding-left: 1.5em; }
+    li { margin: 6px 0; }
+    .dates {
+      padding: 12px 20px;
+      background: #fff8e6;
+      border-left: 4px solid #e3a236;
+      border-radius: 4px;
+    }
+    .dates ul { margin: 4px 0; }
+    .note { color: #5d6870; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>TWINS to Calendarからのお知らせ</h1>
+    <h2>休日設定の訂正とお詫び</h2>
+    <p>TWINS to Calendar v1.0.0 の休日設定に誤りがあり、授業のない日にも授業予定が作成される状態でした。ご迷惑をおかけして申し訳ありません。</p>
+
+    <h2>対象の日付</h2>
+    <div class="dates">
+      <ul>
+        <li>2026年10月30日（金）</li>
+        <li>2026年11月2日（月）</li>
+        <li>2027年1月4日（月）</li>
+        <li>2027年1月5日（火）</li>
+      </ul>
+    </div>
+
+    <h2>すでにカレンダーへ取り込んだ方へ</h2>
+    <p>上記の日付に授業予定が表示されている場合は、お使いのカレンダーアプリで該当する予定を手動で削除してください。繰り返し予定として登録されている場合は、その日だけを削除する選択肢を選んでください。</p>
+    <p class="note">v1.0.1 では休日設定を修正しました。今後新しく書き出す ICS には修正が反映されますが、すでに取り込んだ予定は自動では変更されません。</p>
+  </main>
+</body>
+</html>

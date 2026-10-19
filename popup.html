@@ -245,6 +245,29 @@
       background: white;
     }
 
+    .update-notice {
+      flex-shrink: 0;
+      padding: 10px 16px;
+      background: #fff8e6;
+      border-bottom: 1px solid #ead9aa;
+      font-size: 11px;
+      line-height: 1.5;
+    }
+    .update-notice[hidden] { display: none; }
+    .update-notice strong { display: block; font-size: 12px; }
+    .update-notice button {
+      margin-top: 5px;
+      margin-right: 12px;
+      padding: 0;
+      border: 0;
+      background: none;
+      color: #20678f;
+      font: inherit;
+      font-weight: 600;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
     .loading {
       display: flex;
       align-items: center;
@@ -421,6 +444,15 @@
     <h1>TWINS to Calendar</h1>
     <span class="term-badge" id="termBadge">読み込み中…</span>
   </header>
+
+  <aside class="update-notice" id="updateNotice" hidden>
+    <strong>休日設定の訂正とお詫び</strong>
+    2026年10月30日・11月2日、2027年1月4日・5日の授業予定は、カレンダーから手動で削除してください。
+    <div>
+      <button type="button" id="updateNoticeDetails">詳しく見る</button>
+      <button type="button" id="updateNoticeDismiss">確認しました</button>
+    </div>
+  </aside>
 
   <div id="kdbBar"></div>
 
